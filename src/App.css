@@ -1,11 +1,49 @@
 .App {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 4rem;
+  display: flex;
 }
-.App-header {
+
+.App__contents {
+  flex: 1;
+  padding: 4rem 0rem 0rem 8rem;
+}
+
+/*.App-header {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 3rem;
   color: #4f4f4f;
+}*/
+
+.Sidebar {
+  background: #fafbfd;
+  padding: 4rem;
+}
+
+.Sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.Sidebar ul li {
+  margin: 25px;
+}
+
+.Sidebar ul li a {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: #9e9e9e;
+  text-decoration: none;
+}
+
+.Sidebar ul li a:hover,
+.Sidebar ul li a:active {
+  color: #090f31;
+}
+
+@media only screen and (max-width: 600px) {
+  .Sidebar {
+    display: none;
+  }
 }

@@ -1,16 +1,15 @@
-.Typography {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem;
+.typography__container {
+  max-width: 100%;
 }
-.Typography-header {
-  font-size: 2rem;
+
+.typography__header {
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
   color: #4f4f4f;
 }
 
-.component-label {
+.component__label {
   display: block;
   margin: 1.5rem 0 0.5rem;
   font-family: "Ubuntu Mono", monospace;

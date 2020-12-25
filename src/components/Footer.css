@@ -1,0 +1,21 @@
+.footer {
+  font-family: Montserrat;
+  padding: 2rem 0rem 1rem;
+}
+
+.footer__credits {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #828282;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.footer__copyright {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+  color: #a9a9a9;
+  display: block;
+}
