@@ -1,0 +1,76 @@
+button {
+  border: none;
+  padding: 8px 13px;
+  margin: 0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  cursor: pointer;
+  text-align: center;
+  color: #3f3f3f;
+  margin: 2rem;
+  border-radius: 6px;
+  background: #e0e0e0;
+  box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+  transition: all 250ms ease-in-out;
+}
+
+button:disabled {
+  color: #9e9e9e;
+}
+
+.button--color-default {
+  background: #e0e0e0;
+  box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+  color: #3f3f3f;
+}
+
+.button--color-default:hover,
+.button--color-default:focus {
+  background: #aeaeae;
+}
+
+.button--color-primary {
+  background: #2962ff;
+  box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);
+}
+
+.button--color-primary:hover,
+.button--color-primary:focus {
+  background: #0039cb;
+}
+
+.button--color-secondary {
+  background: #455a64;
+  box-shadow: 0px 2px 3px rgba(69, 90, 100, 0.2);
+}
+
+.button--color-secondary:hover,
+.button--color-secondary:focus {
+  background: #1c313a;
+}
+
+.button--variant-outline {
+  border: 1px solid #3d5afe;
+  color: #3d5afe;
+  box-shadow: none;
+  background: none;
+}
+
+.button--variant-outline:hover,
+.button--variant-outline:focus {
+  background: rgba(41, 98, 255, 0.1);
+}
+
+.button--variant-text {
+  color: #3d5afe;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.button--variant-text:hover {
+  background: rgba(41, 98, 255, 0.1);
+  border-radius: 6px;
+}
