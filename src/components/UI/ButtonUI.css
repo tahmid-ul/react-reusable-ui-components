@@ -16,6 +16,10 @@ button {
   transition: all 250ms ease-in-out;
 }
 
+button:hover {
+  background: #aeaeae;
+}
+
 button:disabled {
   color: #9e9e9e;
 }

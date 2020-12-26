@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import "./ButtonUI.css";
 
-const variantsMapping = {
-  outline: "outline",
-  text: "text",
-  default: "default",
-};
-
-const Button = ({ variant, color, size, children, ...props }) => {
-  const button = variant ? variantsMapping[variant] : "default";
+const Button = ({
+  variant,
+  color,
+  size,
+  startIcon,
+  endIcon,
+  children,
+  ...props
+}) => {
+  const [hovered] = useState(props.hover);
+  const [disableShadow] = useState(props.disableShadow);
 
   return (
     <button
@@ -17,6 +20,8 @@ const Button = ({ variant, color, size, children, ...props }) => {
         [`button--variant-${variant}`]: variant,
         [`button--color-${color}`]: color,
         [`button--size-${size}`]: size,
+        [`button--disabled`]: props.disabled,
+        [`button--disableShadow`]: disableShadow,
       })}
       {...props}
     >
