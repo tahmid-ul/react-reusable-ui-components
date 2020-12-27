@@ -1,7 +1,7 @@
-button {
+.button__default {
   border: none;
   padding: 8px 13px;
-  margin: 0;
+  margin: 1rem 0rem;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -9,14 +9,25 @@ button {
   cursor: pointer;
   text-align: center;
   color: #3f3f3f;
-  margin: 2rem;
   border-radius: 6px;
   background: #e0e0e0;
   box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
   transition: all 250ms ease-in-out;
 }
 
-button:hover {
+.button__label {
+  display: block;
+  font-family: "Ubuntu Mono", monospace;
+  color: #333333;
+  font-size: 12px;
+}
+
+.button__wrap {
+  width: 25%;
+}
+
+.button__default:hover,
+.button__hover {
   background: #aeaeae;
 }
 
@@ -24,57 +35,71 @@ button:disabled {
   color: #9e9e9e;
 }
 
-.button--color-default {
+/******************************************************
+ BUTTON COLORS
+******************************************************/
+.button__color-default {
   background: #e0e0e0;
   box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
   color: #3f3f3f;
 }
 
-.button--color-default:hover,
-.button--color-default:focus {
+.button__color-default:hover,
+.button__color-default:focus {
   background: #aeaeae;
 }
 
-.button--color-primary {
+.button__color-primary {
   background: #2962ff;
   box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);
 }
 
-.button--color-primary:hover,
-.button--color-primary:focus {
+.button__color-primary:hover,
+.button__color-primary:focus {
   background: #0039cb;
 }
 
-.button--color-secondary {
+.button__color-secondary {
   background: #455a64;
   box-shadow: 0px 2px 3px rgba(69, 90, 100, 0.2);
 }
 
-.button--color-secondary:hover,
-.button--color-secondary:focus {
+.button__color-secondary:hover,
+.button__color-secondary:focus {
   background: #1c313a;
 }
 
-.button--variant-outline {
+/******************************************************
+ BUTTON VARIANT
+******************************************************/
+.button__variant-outline {
   border: 1px solid #3d5afe;
   color: #3d5afe;
   box-shadow: none;
   background: none;
 }
 
-.button--variant-outline:hover,
-.button--variant-outline:focus {
+.button__variant-outline:hover,
+.button__variant-outline:focus {
   background: rgba(41, 98, 255, 0.1);
 }
 
-.button--variant-text {
+.button__variant-text {
   color: #3d5afe;
   border: none;
   background: none;
   box-shadow: none;
 }
 
-.button--variant-text:hover {
+.button__variant-text:hover {
   background: rgba(41, 98, 255, 0.1);
   border-radius: 6px;
+}
+
+/******************************************************
+ BUTTON SIZE
+******************************************************/
+
+[class*="-danger"] {
+  background-color: red;
 }

@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import cn from "classnames";
 import "./ButtonUI.css";
 
+const Label = ({ text }) => {
+  return <label className="button__label">{text}</label>;
+};
+
 const Button = ({
   variant,
   color,
@@ -9,24 +13,29 @@ const Button = ({
   startIcon,
   endIcon,
   children,
+  label,
+  hover,
   ...props
 }) => {
-  const [hovered] = useState(props.hover);
   const [disableShadow] = useState(props.disableShadow);
 
   return (
-    <button
-      className={cn({
-        [`button--variant-${variant}`]: variant,
-        [`button--color-${color}`]: color,
-        [`button--size-${size}`]: size,
-        [`button--disabled`]: props.disabled,
-        [`button--disableShadow`]: disableShadow,
-      })}
-      {...props}
-    >
-      {children}
-    </button>
+    <div className="button__wrap">
+      <Label text={label} />
+      <button
+        className={cn("button__default", {
+          [`button__variant-${variant}`]: variant,
+          [`button__color-${color}`]: color,
+          [`button__size-${size}`]: size,
+          [`button__disabled`]: props.disabled,
+          [`button__disableShadow`]: disableShadow,
+          [`button__hover`]: hover,
+        })}
+        {...props}
+      >
+        {children}
+      </button>
+    </div>
   );
 };
 

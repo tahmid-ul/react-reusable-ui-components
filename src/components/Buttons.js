@@ -3,24 +3,36 @@ import "./Buttons.css";
 import Button from "./UI/ButtonUI";
 import Footer from "./Footer";
 
-const Label = ({ text }) => {
-  return <label className="component__label">{text}</label>;
-};
-
 function Buttons() {
   return (
     <div className="button__container">
       <header className="button__header">Buttons</header>
 
-      <Label text={`<Button />`} />
-      <Button>Default</Button>
+      <div className="button__row">
+        <Button label={`<Button />`}>Default</Button>
 
-      <Label text={`&:hover, &:focus`} />
-      <Button hover>Default</Button>
+        <Button label={`&:hover, &:focus`} hover>
+          Default
+        </Button>
+      </div>
 
-      <Label text={`<Button variant="text" />`} />
-      <Button variant="outline">Default</Button>
-      <Button variant="text">Default</Button>
+      <div className="button__row">
+        <Button label={`<Button variant="outline" />`} variant="outline">
+          Default
+        </Button>
+        <Button label={`&:hover, &:focus`} hover>
+          Default
+        </Button>
+      </div>
+
+      <div className="button__row">
+        <Button label={`<Button variant="text" />`} variant="text">
+          Default
+        </Button>
+        <Button label={`&:hover, &:focus`} hover>
+          Default
+        </Button>
+      </div>
       <Button disableShadow>Default</Button>
       <Button disabled>Default</Button>
       <Button variant="text" color="danger" size="m">
