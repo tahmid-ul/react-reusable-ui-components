@@ -1,7 +1,7 @@
 import React from "react";
-import TypographyUI from "./UI/TypographyUI";
+import TypographyUI from "../components/TypographyUI";
 import "./Typography.css";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 const Label = ({ text }) => {
   return <label className="component__label">{text}</label>;

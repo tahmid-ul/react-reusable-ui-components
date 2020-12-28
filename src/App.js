@@ -1,9 +1,8 @@
 import React from "react";
-import Typography from "./components/Typography";
-
-import Buttons from "./components/Buttons";
-import Inputs from "./components/Inputs";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Typography from "./pages/Typography";
+import Buttons from "./pages/Buttons";
+import Inputs from "./pages/Inputs";
 import "./App.css";
 
 const routes = [

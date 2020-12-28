@@ -1,6 +1,6 @@
 import React from "react";
 import "./Inputs.css";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 function Inputs() {
   return (
