@@ -23,7 +23,7 @@ const Button = ({
     <div className="button__wrap">
       <Label text={label} />
       <button
-        style={{ marginTop: !label ? "2rem" : "1rem" }}
+        style={label ? { marginTop: "1rem" } : { marginTop: "2rem" }}
         className={cn("button__default", {
           [`button__variant-${variant}`]: variant,
           [`button__color-${color}`]: color,
@@ -34,9 +34,9 @@ const Button = ({
         })}
         {...props}
       >
-        {startIcon && <i class="material-icons">{startIcon}</i>}
+        {startIcon && <i class="material-icons">{startIcon} </i>}
         {children}
-        {endIcon && <i class="material-icons">{endIcon}</i>}
+        {endIcon && <i class="material-icons"> {endIcon}</i>}
       </button>
     </div>
   );

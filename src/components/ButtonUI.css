@@ -8,10 +8,8 @@
   line-height: 20px;
   cursor: pointer;
   text-align: center;
-  color: #3f3f3f;
+  outline: none;
   border-radius: 6px;
-  background: #e0e0e0;
-  box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
   transition: all 250ms ease-in-out;
 }
 
@@ -24,10 +22,6 @@
 
 .button__wrap {
   width: 33%;
-}
-
-button:disabled {
-  color: #9e9e9e;
 }
 
 /******************************************************
@@ -103,7 +97,8 @@ button:disabled {
   box-shadow: none;
 }
 
-.button__variant-text:hover {
+.button__variant-text:hover,
+.button__variant-text:focus {
   background: rgba(41, 98, 255, 0.1);
   border-radius: 6px;
 }
@@ -111,3 +106,26 @@ button:disabled {
 /******************************************************
  BUTTON SIZE
 ******************************************************/
+
+.button__size-sm {
+  padding: 6px 12px;
+}
+
+.button__size-md {
+  padding: 8px 16px;
+}
+
+.button__size-lg {
+  padding: 11px 22px;
+}
+
+/* Disabled button and box shadow disable */
+
+button:disabled {
+  color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.button__disableShadow {
+  box-shadow: none;
+}
