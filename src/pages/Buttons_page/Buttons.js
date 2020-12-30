@@ -63,7 +63,7 @@ function Buttons() {
       <div className="button__row">
         <Button
           label={`<Button startIcon=”local_grocery_store” />`}
-          startIcon="local_grocery_store"
+          startIcon={<AddShoppingCart />}
           color="primary"
         >
           Default

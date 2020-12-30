@@ -32,12 +32,14 @@ const Button = ({
           [`button__disabled`]: props.disabled,
           [`button__disableShadow`]: disableShadow,
           [`button__hover`]: hover,
+          [`button__icon_start`]: startIcon,
+          [`button__icon_end`]: endIcon,
         })}
         {...props}
       >
-        {startIcon && <i className="material-icons">{startIcon}</i>}
+        {startIcon && <span className="material-icons">{startIcon}</span>}
         {children}
-        {endIcon && <i className="material-icons">{endIcon}</i>}
+        {endIcon && <span className="material-icons">{endIcon}</span>}
       </button>
     </div>
   );

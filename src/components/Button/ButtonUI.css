@@ -17,11 +17,25 @@
   width: 33%;
 }
 
-i.material-icons {
-  font-size: 16px;
-  margin-right: 3px;
-  margin-left: 3px;
-  vertical-align: middle;
+span.material-icons {
+  display: flex;
+}
+
+.button__icon_start .material-icons {
+  margin-right: 5px;
+}
+
+.button__icon_end .material-icons {
+  margin-left: 5px;
+}
+
+.button__icon_start,
+.button__icon_end {
+  display: flex;
+}
+
+span.material-icons .MuiSvgIcon-root {
+  font-size: 20px;
 }
 
 /******************************************************
