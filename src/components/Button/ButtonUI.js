@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import "./ButtonUI.css";
-
-const Label = ({ text }) => {
-  return <label className="button__label">{text}</label>;
-};
+import Label from "../Label/Label";
 
 const Button = ({
   variant,
@@ -19,11 +16,15 @@ const Button = ({
 }) => {
   const [disableShadow] = useState(props.disableShadow);
 
+  let setStyle = {
+    marginTop: label ? "1rem" : "2rem",
+  };
+
   return (
     <div className="button__wrap">
       <Label text={label} />
       <button
-        style={label ? { marginTop: "1rem" } : { marginTop: "2rem" }}
+        style={setStyle}
         className={cn("button__default", {
           [`button__variant-${variant}`]: variant,
           [`button__color-${color}`]: color,
@@ -34,9 +35,9 @@ const Button = ({
         })}
         {...props}
       >
-        {startIcon && <i class="material-icons">{startIcon} </i>}
+        {startIcon && <i className="material-icons">{startIcon}</i>}
         {children}
-        {endIcon && <i class="material-icons"> {endIcon}</i>}
+        {endIcon && <i className="material-icons">{endIcon}</i>}
       </button>
     </div>
   );

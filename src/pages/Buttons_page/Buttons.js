@@ -1,7 +1,7 @@
 import React from "react";
 import "./Buttons.css";
-import Button from "../components/ButtonUI";
-import Footer from "../components/Footer";
+import Button from "../../components/Button/ButtonUI";
+import Footer from "../../components/Footer";
 import AddShoppingCart from "@material-ui/icons/AddShoppingCart";
 
 function Buttons() {
@@ -23,7 +23,7 @@ function Buttons() {
         <Button label={`<Button variant="outline" />`} variant="outline">
           Default
         </Button>
-        <Button label={`&:hover, &:focus`} hover>
+        <Button label={`&:hover, &:focus`} variant="outline" hover>
           Default
         </Button>
       </div>
@@ -63,7 +63,7 @@ function Buttons() {
       <div className="button__row">
         <Button
           label={`<Button startIcon=”local_grocery_store” />`}
-          startIcon={<AddShoppingCart />}
+          startIcon="local_grocery_store"
           color="primary"
         >
           Default

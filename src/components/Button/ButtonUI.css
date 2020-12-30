@@ -13,15 +13,15 @@
   transition: all 250ms ease-in-out;
 }
 
-.button__label {
-  display: block;
-  font-family: "Ubuntu Mono", monospace;
-  color: #333333;
-  font-size: 12px;
-}
-
 .button__wrap {
   width: 33%;
+}
+
+i.material-icons {
+  font-size: 16px;
+  margin-right: 3px;
+  margin-left: 3px;
+  vertical-align: middle;
 }
 
 /******************************************************
@@ -35,7 +35,7 @@
 
 .button__color-default:hover,
 .button__color-default:focus,
-.button__color-default > .button__hover {
+.button__color-default.button__hover {
   background: #aeaeae;
 }
 
@@ -47,7 +47,7 @@
 
 .button__color-primary:hover,
 .button__color-primary:focus,
-.button__color-primary > .button__hover {
+.button__color-primary.button__hover {
   background: #0039cb;
 }
 
@@ -59,7 +59,7 @@
 
 .button__color-secondary:hover,
 .button__color-secondary:focus,
-.button__color-secondary > .button__hover {
+.button__color-secondary.button__hover {
   background: #1c313a;
 }
 
@@ -71,7 +71,7 @@
 
 .button__color-danger:hover,
 .button__color-danger:focus,
-.button__color-danger > .button__hover {
+.button__color-danger.button__hover {
   background: #9a0007;
 }
 
@@ -86,7 +86,8 @@
 }
 
 .button__variant-outline:hover,
-.button__variant-outline:focus {
+.button__variant-outline:focus,
+.button__variant-outline.button__hover {
   background: rgba(41, 98, 255, 0.1);
 }
 
@@ -98,7 +99,8 @@
 }
 
 .button__variant-text:hover,
-.button__variant-text:focus {
+.button__variant-text:focus,
+.button__variant-text.button__hover {
   background: rgba(41, 98, 255, 0.1);
   border-radius: 6px;
 }
