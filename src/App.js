@@ -32,7 +32,7 @@ function App() {
         <div className="Sidebar">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Devchallenges.io</Link>
             </li>
             <li>
               <Link to="/typography">Typography</Link>

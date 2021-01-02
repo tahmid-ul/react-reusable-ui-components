@@ -1,19 +1,25 @@
-.button__default {
-  border: none;
+.input__default {
   padding: 8px 13px;
   margin: 1rem 0rem;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
+
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
   line-height: 20px;
   cursor: pointer;
-  text-align: center;
   outline: none;
-  border-radius: 6px;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 8px;
   transition: all 250ms ease-in-out;
 }
 
-.button__wrap {
+::placeholder {
+  color: #828282;
+}
+
+.input__wrap {
   width: 33%;
 }
 
@@ -21,16 +27,16 @@ span.material-icons {
   display: flex;
 }
 
-.button__icon_start .material-icons {
+.input__icon_start .material-icons {
   margin-right: 5px;
 }
 
-.button__icon_end .material-icons {
+.input__icon_end .material-icons {
   margin-left: 5px;
 }
 
-.button__icon_start,
-.button__icon_end {
+.input__icon_start,
+.input__icon_end {
   display: flex;
 }
 
@@ -39,8 +45,8 @@ span.material-icons .MuiSvgIcon-root {
 }
 
 /******************************************************
- BUTTON COLORS
-******************************************************/
+   BUTTON COLORS
+  ******************************************************/
 .button__color-default {
   background: #e0e0e0;
   box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
@@ -90,8 +96,8 @@ span.material-icons .MuiSvgIcon-root {
 }
 
 /******************************************************
- BUTTON VARIANT
-******************************************************/
+   BUTTON VARIANT
+  ******************************************************/
 .button__variant-outline {
   border: 1px solid #3d5afe;
   color: #3d5afe;
@@ -120,8 +126,8 @@ span.material-icons .MuiSvgIcon-root {
 }
 
 /******************************************************
- BUTTON SIZE
-******************************************************/
+   BUTTON SIZE
+  ******************************************************/
 
 .button__size-sm {
   padding: 6px 12px;

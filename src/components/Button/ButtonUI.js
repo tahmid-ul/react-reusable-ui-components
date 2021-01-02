@@ -12,10 +12,10 @@ const Button = ({
   children,
   label,
   hover,
+  disabled,
+  disableShadow,
   ...props
 }) => {
-  const [disableShadow] = useState(props.disableShadow);
-
   let setStyle = {
     marginTop: label ? "1rem" : "2rem",
   };
@@ -29,7 +29,7 @@ const Button = ({
           [`button__variant-${variant}`]: variant,
           [`button__color-${color}`]: color,
           [`button__size-${size}`]: size,
-          [`button__disabled`]: props.disabled,
+          [`button__disabled`]: disabled,
           [`button__disableShadow`]: disableShadow,
           [`button__hover`]: hover,
           [`button__icon_start`]: startIcon,
