@@ -1,47 +1,49 @@
 import React from "react";
 import cn from "classnames";
 import "./InputUI.css";
-import Label from "../Label/Label";
+
+const Label = ({ text }) => {
+  return <label className="input__label">{text}</label>;
+};
+
+const Description = ({ text }) => {
+  return <span className="input__description">{text}</span>;
+};
 
 const Input = ({
-  type,
+  type = "text",
   name,
   value,
   size,
   helperText,
-  error,
-  disabled,
   startIcon,
   endIcon,
   label,
-  hover,
-  focus,
+  description,
   row,
   placeholder = "Placeholder",
   ...props
 }) => {
-  let setStyle = {
-    marginTop: label ? "1rem" : "2rem",
-  };
-
   return (
     <div className="input__wrap">
-      <Label for={name} text={label} />
+      <Description text={description} />
+      <Label text={label} />
       <input
         type={type}
         name={name}
+        value={value !== "" ? value : placeholder}
         className={cn("input__default", {
           [`input__size-${size}`]: size,
-          [`input__disabled`]: disabled,
-          [`input__error`]: error,
-          [`input__hover`]: hover,
-          [`input__focus`]: focus,
+          [`input__disabled`]: props.disabled,
+          [`input__error`]: props.error,
+          [`input__hover`]: props.hover,
+          [`input__focus`]: props.focus,
           [`input__icon_start`]: startIcon,
           [`input__icon_end`]: endIcon,
           [`input__full_width`]: props.fullWidth,
         })}
+        placeholder={placeholder}
         {...props}
-        value={value ? value : placeholder}
       />
     </div>
   );

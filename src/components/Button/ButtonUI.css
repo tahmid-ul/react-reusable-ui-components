@@ -17,6 +17,13 @@
   width: 33%;
 }
 
+.button__label {
+  display: block;
+  font-family: "Ubuntu Mono", monospace;
+  color: #333333;
+  font-size: 12px;
+}
+
 span.material-icons {
   display: flex;
 }

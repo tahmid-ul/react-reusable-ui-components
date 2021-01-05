@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import cn from "classnames";
 import "./ButtonUI.css";
-import Label from "../Label/Label";
+
+const Label = ({ text }) => {
+  return <label className="button__label">{text}</label>;
+};
 
 const Button = ({
   variant,
