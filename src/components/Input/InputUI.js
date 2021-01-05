@@ -10,6 +10,7 @@ const Input = ({
   size,
   helperText,
   error,
+  disabled,
   startIcon,
   endIcon,
   label,
@@ -31,7 +32,7 @@ const Input = ({
         name={name}
         className={cn("input__default", {
           [`input__size-${size}`]: size,
-          [`input__disabled`]: props.disabled,
+          [`input__disabled`]: disabled,
           [`input__error`]: error,
           [`input__hover`]: hover,
           [`input__focus`]: focus,

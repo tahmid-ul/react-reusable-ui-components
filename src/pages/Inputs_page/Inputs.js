@@ -9,10 +9,6 @@ function Inputs() {
       <header className="input__header">Inputs</header>
       <div className="input__row">
         <Input label={`<Input />`}>Default</Input>
-
-        <Input label={`&:hover, &:focus`} hover>
-          Default
-        </Input>
       </div>
       <Footer />
     </div>
