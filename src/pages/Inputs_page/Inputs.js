@@ -14,23 +14,26 @@ function Inputs() {
       </div>
 
       <div className="input__row">
-        <Input label={`Label`} description={`<Input error />`} />
-        <Input label={`Label`} description={`&:hover`} hover />
-        <Input label={`Label`} description={`&:focus`} focus />
+        <Input label={`Label`} description={`<Input error />`} error />
+        <Input label={`Label`} description={`&:hover`} error hover />
+        <Input label={`Label`} description={`&:focus`} error focus />
       </div>
 
       <div className="input__row">
-        <Input label={`Label`} description={`<Input disabled />`} />
+        <Input label={`Label`} description={`<Input disabled />`} disabled />
       </div>
 
       <div className="input__row">
         <Input
           label={`Label`}
           description={`<Input helperText="Some interesting text" />`}
+          helperText="Some interesting text"
         />
         <Input
           label={`Label`}
           description={`<Input helperText="Some interesting text" error />`}
+          helperText="Some interesting text"
+          error
         />
       </div>
 
@@ -40,20 +43,29 @@ function Inputs() {
       </div>
 
       <div className="input__row">
-        <Input label={`Label`} description={`<Input value="text" />`} />
+        <Input
+          label={`Label`}
+          description={`<Input value="text" />`}
+          value="text"
+        />
       </div>
 
       <div className="input__row">
-        <Input label={`Label`} description={`<Input size="sm" />`} />
-        <Input label={`Label`} description={`<Input size="sm" />`} />
+        <Input label={`Label`} description={`<Input size="sm" />`} size="sm" />
+        <Input label={`Label`} description={`<Input size="md" />`} size="md" />
       </div>
 
       <div className="input__row">
-        <Input label={`Label`} description={`<Input fullWidth />`} />
+        <Input label={`Label`} description={`<Input fullWidth />`} fullWidth />
       </div>
 
       <div className="input__row">
-        <Input label={`Label`} description={`<Input multiline row="4" />`} />
+        <Input
+          label={`Label`}
+          description={`<Input multiline row="4" />`}
+          multiline
+          row="4"
+        />
       </div>
 
       <Footer />
