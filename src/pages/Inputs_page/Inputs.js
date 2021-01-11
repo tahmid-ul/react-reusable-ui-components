@@ -14,9 +14,46 @@ function Inputs() {
       </div>
 
       <div className="input__row">
-        <Input label={`<Input />`} />
-        <Input label={`<Input />`} hover />
-        <Input label={`<Input />`} focus />
+        <Input label={`Label`} description={`<Input error />`} />
+        <Input label={`Label`} description={`&:hover`} hover />
+        <Input label={`Label`} description={`&:focus`} focus />
+      </div>
+
+      <div className="input__row">
+        <Input label={`Label`} description={`<Input disabled />`} />
+      </div>
+
+      <div className="input__row">
+        <Input
+          label={`Label`}
+          description={`<Input helperText="Some interesting text" />`}
+        />
+        <Input
+          label={`Label`}
+          description={`<Input helperText="Some interesting text" error />`}
+        />
+      </div>
+
+      <div className="input__row">
+        <Input label={`Label`} description={`<Input startIcon />`} />
+        <Input label={`Label`} description={`<Input endIcon />`} />
+      </div>
+
+      <div className="input__row">
+        <Input label={`Label`} description={`<Input value="text" />`} />
+      </div>
+
+      <div className="input__row">
+        <Input label={`Label`} description={`<Input size="sm" />`} />
+        <Input label={`Label`} description={`<Input size="sm" />`} />
+      </div>
+
+      <div className="input__row">
+        <Input label={`Label`} description={`<Input fullWidth />`} />
+      </div>
+
+      <div className="input__row">
+        <Input label={`Label`} description={`<Input multiline row="4" />`} />
       </div>
 
       <Footer />
