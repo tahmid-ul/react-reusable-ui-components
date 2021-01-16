@@ -2,6 +2,8 @@ import React from "react";
 import "./Inputs.css";
 import Input from "../../components/Input/InputUI";
 import Footer from "../../components/Footer";
+import PhoneIcon from "@material-ui/icons/Phone";
+import LockIcon from "@material-ui/icons/Lock";
 
 function Inputs() {
   return (
@@ -38,8 +40,16 @@ function Inputs() {
       </div>
 
       <div className="input__row">
-        <Input label={`Label`} description={`<Input startIcon />`} />
-        <Input label={`Label`} description={`<Input endIcon />`} />
+        <Input
+          label={`Label`}
+          description={`<Input startIcon />`}
+          startIcon={<PhoneIcon />}
+        />
+        <Input
+          label={`Label`}
+          description={`<Input endIcon />`}
+          endIcon={<LockIcon />}
+        />
       </div>
 
       <div className="input__row">

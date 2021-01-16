@@ -1,5 +1,6 @@
 .input__wrap {
   width: 33%;
+  position: relative;
 }
 
 .input__wrap_fullwidth {
@@ -64,29 +65,40 @@ input:focus {
   border: 1px solid #d32f2f;
 }
 
+.input__helper_text {
+  font-size: 12px;
+  line-height: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+.input__icon {
+  padding: 5px;
+  color: #828282;
+  position: absolute;
+  z-index: 1;
+}
+
+.start__icon {
+  top: 65px;
+  left: 5px;
+}
+
+.end__icon {
+  top: 65px;
+  right: 90px;
+}
+
 /******************************************************
    Input with icon
   ******************************************************/
 
-span.material-icons {
-  display: flex;
+.input__icon_start {
+  padding-left: 40px;
 }
 
-.input__icon_start .material-icons {
-  margin-right: 5px;
-}
-
-.input__icon_end .material-icons {
-  margin-left: 5px;
-}
-
-.input__icon_start,
 .input__icon_end {
-  display: flex;
-}
-
-span.material-icons .MuiSvgIcon-root {
-  font-size: 20px;
+  padding-right: 40px;
 }
 
 /******************************************************
@@ -111,4 +123,9 @@ input:disabled {
 
 input:disabled:hover {
   background: none;
+}
+
+/* Full width input */
+.input__full_width {
+  width: 100%;
 }

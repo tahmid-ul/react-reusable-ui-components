@@ -18,6 +18,14 @@ const Description = ({ text, color }) => {
   );
 };
 
+const HelperText = ({ text, color }) => {
+  return (
+    <span className="input__helper_text" style={color}>
+      {text}
+    </span>
+  );
+};
+
 const Input = ({
   type = "text",
   name,
@@ -30,13 +38,19 @@ const Input = ({
   description,
   row,
   placeholder = "Placeholder",
+  multiline,
   ...props
 }) => {
+  const Component = multiline ? "textarea" : "input";
+
   let setLabelColor = {
     color: props.error ? "#D32F2F" : props.focus ? "#2962FF" : "#333333",
   };
   let setDescColor = {
     color: props.focus || props.hover ? "#828282" : "#333333",
+  };
+  let setHelperColor = {
+    color: props.error ? "#D32F2F" : "#828282",
   };
 
   return (
@@ -47,7 +61,13 @@ const Input = ({
     >
       <Description text={description} color={setDescColor} />
       <Label text={label} color={setLabelColor} />
-      <input
+      {startIcon ? (
+        <span className="input__icon start__icon">{startIcon}</span>
+      ) : (
+        ""
+      )}
+      {endIcon ? <span className="input__icon end__icon">{endIcon}</span> : ""}
+      <Component
         type={type}
         name={name}
         value={value !== "" ? value : placeholder}
@@ -64,6 +84,11 @@ const Input = ({
         placeholder={placeholder}
         {...props}
       />
+      {helperText ? (
+        <HelperText text={helperText} color={setHelperColor} />
+      ) : (
+        ""
+      )}
     </div>
   );
 };
