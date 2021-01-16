@@ -2,12 +2,20 @@ import React from "react";
 import cn from "classnames";
 import "./InputUI.css";
 
-const Label = ({ text }) => {
-  return <label className="input__label">{text}</label>;
+const Label = ({ text, color }) => {
+  return (
+    <label className="input__label" style={color}>
+      {text}
+    </label>
+  );
 };
 
-const Description = ({ text }) => {
-  return <span className="input__description">{text}</span>;
+const Description = ({ text, color }) => {
+  return (
+    <span className="input__description" style={color}>
+      {text}
+    </span>
+  );
 };
 
 const Input = ({
@@ -24,10 +32,21 @@ const Input = ({
   placeholder = "Placeholder",
   ...props
 }) => {
+  let setLabelColor = {
+    color: props.error ? "#D32F2F" : props.focus ? "#2962FF" : "#333333",
+  };
+  let setDescColor = {
+    color: props.focus || props.hover ? "#828282" : "#333333",
+  };
+
   return (
-    <div className="input__wrap">
-      <Description text={description} />
-      <Label text={label} />
+    <div
+      className={cn("input__wrap", {
+        [`input__wrap_fullwidth`]: props.fullWidth,
+      })}
+    >
+      <Description text={description} color={setDescColor} />
+      <Label text={label} color={setLabelColor} />
       <input
         type={type}
         name={name}

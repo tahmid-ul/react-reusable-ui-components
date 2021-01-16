@@ -2,8 +2,12 @@ import React from "react";
 import cn from "classnames";
 import "./ButtonUI.css";
 
-const Label = ({ text }) => {
-  return <label className="button__label">{text}</label>;
+const Label = ({ text, color }) => {
+  return (
+    <label className="button__label" style={color}>
+      {text}
+    </label>
+  );
 };
 
 const Button = ({
@@ -22,10 +26,13 @@ const Button = ({
   let setStyle = {
     marginTop: label ? "1rem" : "2rem",
   };
+  let setLabelColor = {
+    color: hover ? "#828282" : "#333333",
+  };
 
   return (
     <div className="button__wrap">
-      <Label text={label} />
+      <Label text={label} color={setLabelColor} />
       <button
         style={setStyle}
         className={cn("button__default", {
