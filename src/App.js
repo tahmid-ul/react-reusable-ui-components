@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./pages/Home_page/Home";
 import Typography from "./pages/Typography_page/Typography";
 import Buttons from "./pages/Buttons_page/Buttons";
 import Inputs from "./pages/Inputs_page/Inputs";
@@ -9,7 +10,7 @@ const routes = [
   {
     path: "/",
     exact: true,
-    main: () => <h2>Home</h2>,
+    main: () => <Home />,
   },
   {
     path: "/typography",
