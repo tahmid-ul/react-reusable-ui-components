@@ -16,6 +16,10 @@ const routes = [
     main: () => <Typography />,
   },
   {
+    path: "/grid",
+    main: () => <h2>Grid (comming soon)</h2>,
+  },
+  {
     path: "/buttons",
     main: () => <Buttons />,
   },
@@ -31,11 +35,16 @@ function App() {
       <div className="App">
         <div className="Sidebar">
           <ul>
-            <li>
-              <Link to="/">Devchallenges.io</Link>
+            <li className="logo">
+              <Link to="/">
+                <span className="initials">Dev</span>challenges.io
+              </Link>
             </li>
             <li>
               <Link to="/typography">Typography</Link>
+            </li>
+            <li>
+              <Link to="/grid">Grid</Link>
             </li>
             <li>
               <Link to="/buttons">Buttons</Link>

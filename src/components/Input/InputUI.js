@@ -44,7 +44,13 @@ const Input = ({
   const Component = multiline ? "textarea" : "input";
 
   let setLabelColor = {
-    color: props.error ? "#D32F2F" : props.focus ? "#2962FF" : "#333333",
+    color: props.hover
+      ? "#333333"
+      : props.error
+      ? "#D32F2F"
+      : props.focus
+      ? "#2962FF"
+      : "#333333",
   };
   let setDescColor = {
     color: props.focus || props.hover ? "#828282" : "#333333",

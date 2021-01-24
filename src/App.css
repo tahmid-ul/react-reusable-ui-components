@@ -11,7 +11,8 @@
 
 .Sidebar {
   background: #fafbfd;
-  padding: 4rem;
+  padding: 1rem 4rem;
+  height: 100vh;
 }
 
 .Sidebar ul {
@@ -20,6 +21,18 @@
 }
 .Sidebar ul li {
   margin: 25px;
+}
+
+.Sidebar ul .logo {
+  margin-bottom: 6rem;
+}
+
+.Sidebar ul .logo a {
+  color: #090f31;
+}
+
+.Sidebar ul .logo a .initials {
+  color: #f7542e;
 }
 
 .Sidebar ul li a {

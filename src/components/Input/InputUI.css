@@ -51,11 +51,6 @@
   border: 1px solid #2962ff;
 }
 
-.input__hover,
-input:hover {
-  border: 1px solid #333333;
-}
-
 .input__focus,
 input:focus {
   border: 1px solid #2962ff;
@@ -63,6 +58,11 @@ input:focus {
 
 .input__error {
   border: 1px solid #d32f2f;
+}
+
+.input__hover,
+input:hover {
+  border: 1px solid #333333;
 }
 
 .input__helper_text {

@@ -72,9 +72,9 @@ function Inputs() {
       <div className="input__row">
         <Input
           label={`Label`}
-          description={`<Input multiline row="4" />`}
+          description={`<Input multiline rows="4" />`}
           multiline
-          row="4"
+          rows="4"
         />
       </div>
 
