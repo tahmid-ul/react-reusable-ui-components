@@ -13,3 +13,9 @@
   display: flex;
   margin-bottom: 2rem;
 }
+
+@media (max-width: 800px) {
+  .button__row {
+    flex-direction: column;
+  }
+}

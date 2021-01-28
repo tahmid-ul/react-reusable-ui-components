@@ -20,7 +20,6 @@
 .button__label {
   display: block;
   font-family: "Ubuntu Mono", monospace;
-
   font-size: 12px;
 }
 
@@ -155,4 +154,13 @@ button:disabled:hover {
 
 .button__disableShadow {
   box-shadow: none;
+}
+
+@media (max-width: 800px) {
+  .button__wrap {
+    width: 100%;
+  }
+  .button__default {
+    margin: 1rem auto;
+  }
 }

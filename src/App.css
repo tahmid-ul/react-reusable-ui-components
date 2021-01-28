@@ -2,17 +2,18 @@
   max-width: 100%;
   margin: 0 auto;
   display: flex;
+  height: 100vh;
 }
 
 .App__contents {
-  flex: 1;
-  padding: 4rem 8rem 0rem 8rem;
+  padding: 4rem 8rem 0rem 6rem;
+  flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .Sidebar {
   background: #fafbfd;
   padding: 1rem 4rem;
-  height: 100vh;
 }
 
 .Sidebar ul {
@@ -35,7 +36,8 @@
   color: #f7542e;
 }
 
-.Sidebar ul li a {
+.Sidebar ul li a,
+.sidebar__footer a {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -48,8 +50,19 @@
   color: #090f31;
 }
 
-@media only screen and (max-width: 600px) {
+.sidebar__footer {
+  color: #828282;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 20px;
+}
+
+@media only screen and (max-width: 800px) {
   .Sidebar {
     display: none;
+  }
+  .App__contents {
+    padding: 3.5rem 1.5rem 0 1.5rem;
+    text-align: center;
   }
 }

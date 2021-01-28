@@ -1,6 +1,6 @@
 .footer {
   font-family: Montserrat;
-  padding: 2rem 0rem 1rem;
+  padding: 3rem 0rem 1rem;
 }
 
 .footer__credits {
@@ -12,9 +12,15 @@
   margin-bottom: 2rem;
 }
 
-.footer__credits a {
+.footer__credits a,
+.footer__copyright a {
   color: #828282;
   text-decoration: none;
+}
+
+.footer__credits a:hover,
+.footer__copyright a:hover {
+  color: #090f31;
 }
 
 .footer__copyright {

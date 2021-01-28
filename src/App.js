@@ -54,6 +54,17 @@ function App() {
               <Link to="/inputs">Inputs</Link>
             </li>
           </ul>
+
+          <div className="sidebar__footer">
+            Find the project on:{" "}
+            <a
+              href="https://github.com/tahmid-ul/react-reusable-ui-components"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </a>
+          </div>
         </div>
 
         <div className="App__contents">

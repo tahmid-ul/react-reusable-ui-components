@@ -14,7 +14,13 @@ function Footer(params) {
         </a>
       </span>
       <span className="footer__copyright">
-        Tahmid ul karim @ DevChallenges.io
+        <a href="https://github.com/tahmid-ul" target="_blank" rel="noreferrer">
+          Tahmid ul karim
+        </a>{" "}
+        @{" "}
+        <a href="https://devchallenges.io/" target="_blank" rel="noreferrer">
+          devchallenges.io
+        </a>
       </span>
     </div>
   );

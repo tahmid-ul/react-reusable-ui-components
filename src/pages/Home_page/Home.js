@@ -9,8 +9,10 @@ function Home() {
       <h1 className="home__header">Reusable Components - React</h1>
       <p className="home__container_subtitle">
         This project is a part of{" "}
-        <Link to="https://devchallenges.io/">devchallenges.io</Link> Front-end
-        developer challenges.
+        <a href="https://devchallenges.io/" target="_blank" rel="noreferrer">
+          devchallenges.io
+        </a>{" "}
+        Front-end developer challenges.
       </p>
       <p>
         It is built fully using React and hosted on firebase. Currently there
@@ -27,16 +29,6 @@ function Home() {
         <li>
           <Link to="/inputs">Inputs</Link>
         </li>
-      </div>
-
-      <div className="home__footer">
-        Find the project on:{" "}
-        <Link
-          to="https://github.com/tahmid-ul/react-reusable-ui-components"
-          target="_blank"
-        >
-          Github
-        </Link>
       </div>
     </div>
   );

@@ -32,6 +32,7 @@
 .input__description {
   font-style: normal;
   font-weight: normal;
+  font-family: "Ubuntu Mono", monospace;
   font-size: 12px;
   line-height: 12px;
   margin-bottom: 16px;
@@ -39,6 +40,7 @@
 
 .input__label {
   font-style: normal;
+  font-family: "Ubuntu Mono", monospace;
   font-weight: bold;
   font-size: 12px;
   line-height: 17px;
@@ -128,4 +130,13 @@ input:disabled:hover {
 /* Full width input */
 .input__full_width {
   width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .input__wrap {
+    width: 100%;
+  }
+  .end__icon {
+    right: 55px;
+  }
 }

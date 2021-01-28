@@ -53,3 +53,16 @@
 .typography--color-error {
   color: #eb5757;
 }
+
+@media only screen and (max-width: 800px) {
+  .typography--variant-h1 {
+    font-size: 4rem;
+  }
+  .typography--variant-h2 {
+    font-size: 3.5rem;
+  }
+
+  .typography--variant-h3 {
+    font-size: 2.5rem;
+  }
+}
