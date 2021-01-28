@@ -74,6 +74,11 @@ input:hover {
   margin-top: 5px;
 }
 
+.icon__wrapper {
+  position: relative;
+  width: 230px;
+}
+
 .input__icon {
   padding: 5px;
   color: #828282;
@@ -82,13 +87,13 @@ input:hover {
 }
 
 .start__icon {
-  top: 65px;
-  left: 5px;
+  top: 15%;
+  left: 0;
 }
 
 .end__icon {
-  top: 65px;
-  right: 90px;
+  top: 15%;
+  right: 0;
 }
 
 /******************************************************
@@ -136,7 +141,7 @@ input:disabled:hover {
   .input__wrap {
     width: 100%;
   }
-  .end__icon {
-    right: 55px;
+  .icon__wrapper {
+    margin: auto;
   }
 }

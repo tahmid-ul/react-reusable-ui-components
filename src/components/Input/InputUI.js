@@ -67,29 +67,35 @@ const Input = ({
     >
       <Description text={description} color={setDescColor} />
       <Label text={label} color={setLabelColor} />
-      {startIcon ? (
-        <span className="input__icon start__icon">{startIcon}</span>
-      ) : (
-        ""
-      )}
-      {endIcon ? <span className="input__icon end__icon">{endIcon}</span> : ""}
-      <Component
-        type={type}
-        name={name}
-        value={value !== "" ? value : placeholder}
-        className={cn("input__default", {
-          [`input__size-${size}`]: size,
-          [`input__disabled`]: props.disabled,
-          [`input__error`]: props.error,
-          [`input__hover`]: props.hover,
-          [`input__focus`]: props.focus,
-          [`input__icon_start`]: startIcon,
-          [`input__icon_end`]: endIcon,
-          [`input__full_width`]: props.fullWidth,
-        })}
-        placeholder={placeholder}
-        {...props}
-      />
+      <div className="icon__wrapper">
+        {startIcon ? (
+          <span className="input__icon start__icon">{startIcon}</span>
+        ) : (
+          ""
+        )}
+        {endIcon ? (
+          <span className="input__icon end__icon">{endIcon}</span>
+        ) : (
+          ""
+        )}
+        <Component
+          type={type}
+          name={name}
+          value={value !== "" ? value : placeholder}
+          className={cn("input__default", {
+            [`input__size-${size}`]: size,
+            [`input__disabled`]: props.disabled,
+            [`input__error`]: props.error,
+            [`input__hover`]: props.hover,
+            [`input__focus`]: props.focus,
+            [`input__icon_start`]: startIcon,
+            [`input__icon_end`]: endIcon,
+            [`input__full_width`]: props.fullWidth,
+          })}
+          placeholder={placeholder}
+          {...props}
+        />
+      </div>
       {helperText ? (
         <HelperText text={helperText} color={setHelperColor} />
       ) : (

@@ -66,7 +66,6 @@ function App() {
             </a>
           </div>
         </div>
-
         <div className="App__contents">
           <Switch>
             {routes.map((route, index) => (
