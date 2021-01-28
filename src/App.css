@@ -6,7 +6,7 @@
 }
 
 .App__contents {
-  padding: 4rem 8rem 0rem 6rem;
+  padding: 4rem 0rem 0rem 6rem;
   flex-grow: 1;
   overflow-y: scroll;
 }
@@ -70,6 +70,7 @@
   }
   .Sidebar ul {
     display: flex;
+    justify-content: center;
   }
   .Sidebar ul li {
     margin: 15px;
